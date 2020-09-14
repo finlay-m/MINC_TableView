@@ -14,6 +14,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var peopleTableView: UITableView!
     
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    
     // declares array of strings, () creates the array (initializes?)
     var peoplenames = [String]()
     
@@ -34,6 +38,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         peoplenames.append("Emil")
         
     }
+    
+    // is not promising a value, it is promising the existence of the text field
+    // difference between zero, empty, and non-existence
+    @IBAction func addName(_ sender: Any) {
+        
+        // if they click on Add button with empty text box, it doens't add it to list
+        // return returns to beginning of addName function
+        if(nameTextField.text == "")
+        {
+            return
+        }
+        
+        // adds text from text box into list
+        peoplenames.append(nameTextField.text!)
+        
+        // without reload, the programme does not react to the addition of info
+        peopleTableView.reloadData()
+        
+        // to save the names input: you can use firebase, userdefaults (list, small amount of data, core data (for advanced, a lot of use of data)
+        
+        // removes the text in the text box after it is added
+        nameTextField.text = ""
+    }
+    
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
