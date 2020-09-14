@@ -13,6 +13,7 @@
 		8532387D250F4FB20081936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8532387B250F4FB20081936A /* Main.storyboard */; };
 		8532387F250F4FBC0081936A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8532387E250F4FBC0081936A /* Assets.xcassets */; };
 		85323882250F4FBC0081936A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85323880250F4FBC0081936A /* LaunchScreen.storyboard */; };
+		8532388A250F58B20081936A /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85323889250F58B20081936A /* PersonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8532387E250F4FBC0081936A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85323881250F4FBC0081936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85323883250F4FBC0081936A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85323889250F58B20081936A /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				85323875250F4FB20081936A /* AppDelegate.swift */,
 				85323877250F4FB20081936A /* SceneDelegate.swift */,
 				85323879250F4FB20081936A /* ViewController.swift */,
+				85323889250F58B20081936A /* PersonTableViewCell.swift */,
 				8532387B250F4FB20081936A /* Main.storyboard */,
 				8532387E250F4FBC0081936A /* Assets.xcassets */,
 				85323880250F4FBC0081936A /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				8532387A250F4FB20081936A /* ViewController.swift in Sources */,
 				85323876250F4FB20081936A /* AppDelegate.swift in Sources */,
+				8532388A250F58B20081936A /* PersonTableViewCell.swift in Sources */,
 				85323878250F4FB20081936A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
