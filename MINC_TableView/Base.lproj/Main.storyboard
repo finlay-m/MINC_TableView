@@ -61,6 +61,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ageLabel" destination="Qog-6d-dge" id="Lac-7j-SKH"/>
+                                            <outlet property="doneView" destination="le7-q3-LK0" id="Z84-EG-v1E"/>
                                             <outlet property="personLabel" destination="F4h-Wm-WEG" id="VSm-Dg-gC0"/>
                                         </connections>
                                     </tableViewCell>

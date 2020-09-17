@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // declares array of strings, () creates the array (initializes?)
     var peoplenames = [String]()
+    var peopledone = [Bool]()
     
 
     override func viewDidLoad() {
@@ -37,6 +38,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         peoplenames.append("Duncan")
         peoplenames.append("Emil")
         
+        peopledone.append(false)
+        peopledone.append(true)
+        peopledone.append(false)
+        peopledone.append(false)
+        peopledone.append(false)
+        
     }
     
     // is not promising a value, it is promising the existence of the text field
@@ -52,6 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // adds text from text box into list
         peoplenames.append(nameTextField.text!)
+        peopledone.append(false)
         
         // without reload, the programme does not react to the addition of info
         peopleTableView.reloadData()
@@ -64,26 +72,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return peoplenames.count
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // tableViewan and peopleTableView point to same thing within this function
-        // this cycles through every row and reuses cells
-        // this is where you define the cell as your customized cell type
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell") as! PersonTableViewCell
-        
-        // there is a built in cell.textLabel, but generally do not use it
-        // indextPath.row
-        cell.personLabel.text = String(indexPath.row) + " " + peoplenames[indexPath.row]
-        // + " " + String(indexPath.row)
-        
-        return cell
-    }
+   
     
     // did select row at function, for clicking on row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -94,11 +83,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // don't tell table view to remove row, it is only graphical
         // the way to change rows is to change the array, but that doesn't change the screen
         // this changes the array
-        peoplenames.remove(at: indexPath.row)
+        // peoplenames.remove(at: indexPath.row)
         // this updates the screen
+        // peopleTableView.reloadData()
+        
+        // click on a row to turn it from red to green
+        // peopledone[indexPath.row] = true
+        
+        // click on row to toggle between red and green
+        if(peopledone[indexPath.row] == true){
+            peopledone[indexPath.row] = false
+        } else {
+            peopledone[indexPath.row] = true
+        }
+        
         peopleTableView.reloadData()
         
     }
     
+    
 }
+
 
