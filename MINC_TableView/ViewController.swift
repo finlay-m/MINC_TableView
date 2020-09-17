@@ -79,10 +79,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // there is a built in cell.textLabel, but generally do not use it
         // indextPath.row
-        cell.personLabel.text = peoplenames[indexPath.row]
+        cell.personLabel.text = String(indexPath.row) + " " + peoplenames[indexPath.row]
         // + " " + String(indexPath.row)
         
         return cell
+    }
+    
+    // did select row at function, for clicking on row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // now the row that you click on is logged in terminal
+        print("Du ar tryckt på rad nummer " + String(indexPath.row))
+        
+        // don't tell table view to remove row, it is only graphical
+        // the way to change rows is to change the array, but that doesn't change the screen
+        // this changes the array
+        peoplenames.remove(at: indexPath.row)
+        // this updates the screen
+        peopleTableView.reloadData()
+        
     }
     
 }

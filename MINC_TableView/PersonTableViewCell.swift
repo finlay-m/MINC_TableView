@@ -12,6 +12,9 @@ class PersonTableViewCell: UITableViewCell {
     
     @IBOutlet weak var personLabel: UILabel!
     
+    @IBOutlet weak var ageLabel: UILabel!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -20,27 +20,47 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="KrF-LK-n7U" customClass="PersonTableViewCell" customModule="MINC_TableView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KrF-LK-n7U" id="qwP-af-PeN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4h-Wm-WEG">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-6d-dge">
+                                                    <rect key="frame" x="352" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="le7-q3-LK0">
+                                                    <rect key="frame" x="192" y="6.5" width="30" height="30"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="UOY-jw-Lkg"/>
+                                                        <constraint firstAttribute="height" constant="30" id="aDW-ND-cIv"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qog-6d-dge" secondAttribute="bottom" id="EMH-nS-uET"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="F4h-Wm-WEG" secondAttribute="trailing" id="Gwh-TY-n2O"/>
                                                 <constraint firstItem="F4h-Wm-WEG" firstAttribute="leading" secondItem="qwP-af-PeN" secondAttribute="leadingMargin" id="HNC-Fb-ydl"/>
+                                                <constraint firstItem="Qog-6d-dge" firstAttribute="top" secondItem="qwP-af-PeN" secondAttribute="topMargin" id="Nal-LG-Kjh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qog-6d-dge" secondAttribute="trailing" id="UKa-bd-bWL"/>
+                                                <constraint firstItem="le7-q3-LK0" firstAttribute="centerY" secondItem="qwP-af-PeN" secondAttribute="centerY" id="gfh-u2-RgK"/>
                                                 <constraint firstItem="F4h-Wm-WEG" firstAttribute="top" secondItem="qwP-af-PeN" secondAttribute="topMargin" id="ha8-ZV-omW"/>
+                                                <constraint firstItem="le7-q3-LK0" firstAttribute="centerX" secondItem="qwP-af-PeN" secondAttribute="centerX" id="s5r-Cq-V2O"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="F4h-Wm-WEG" secondAttribute="bottom" id="tUq-I5-MRq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="ageLabel" destination="Qog-6d-dge" id="Lac-7j-SKH"/>
                                             <outlet property="personLabel" destination="F4h-Wm-WEG" id="VSm-Dg-gC0"/>
                                         </connections>
                                     </tableViewCell>
